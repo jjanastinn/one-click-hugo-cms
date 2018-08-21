@@ -1,4 +1,19 @@
 ---
+title: Theresa Scholl
+subtitle: Support sustainable farming while enjoying a cup
+image: /img/home-jumbotron.jpg
+about:
+    heading: About me
+    image: /img/home-jumbotron.jpg
+    quote: "Textilien als die second & third skin haben sowohl in emotionaler als auch in funktionaler Hinsicht eine große Bedeutung für den Menschen."
+    text: |
+        Mein Name ist Theresa Scholl und ich bin Textildesignerin mit einer Leidenschaft für Licht und Architektur.
+
+        Schon während meines Bachelorstudiums habe ich mich vorrangig mit der Gestaltung und Entwicklung von Wohn- und Heimtextilien befasst. Im Masterstudium an der Hochschule Niederrhein lag mein Schwerpunkt auf der Untersuchung der Bedeutung von Textilien in der Architektur aus designtheoretischer Sicht sowie der Entwicklung neuartiger textiler Materialien wie Smart Textiles und Papiertextilien. Aufgrund meiner Recherchen und praktischen Erfahrungen sehe ich für Textilien im Bereich der Gestaltung des Innenraums eine große Zukunft.
+
+        Gerne freue ich mich über Kontaktaufnahme bezüglich meiner Arbeit und zukünftiger Projekte. 
+---
+<!-- ---
 title: "Great coffee with a conscience"
 subtitle: Support sustainable farming while enjoying a cup
 image: /img/home-jumbotron.jpg
@@ -16,5 +31,5 @@ products:
 values:
     heading: Our values
     text: Coffee is an amazing part of human culture but it has a dark side too – one of colonialism and mindless abuse of natural resources and human lives. We want to turn this around and return the coffee trade to the drink’s exhilarating, empowering and unifying nature.
----
+--- -->
 
