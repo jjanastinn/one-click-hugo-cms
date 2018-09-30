@@ -85,12 +85,17 @@ nav {
   margin-bottom: 10px;
   grid-row-start: 3;
   border-left: 10px solid #F03A47;
+  animation: load 1s forwards 1s;
+  transform-origin: bottom;
+  visibility: hidden;
 }
 
 .vertical-red-long {
   grid-row: 4 / 6;
   grid-column-start: 3;
   border-right: 10px solid #F03A47;
+  animation: load 1s forwards;
+  transform-origin: bottom;
 }
 
 .horizontal-lines {
@@ -467,6 +472,17 @@ nav {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes load {
+  from {
+    transform: scaleY(0);
+    visibility: hidden;
+  }
+  to {
+    transform: scaleY(1);
+    visibility: visible;
   }
 }
 
