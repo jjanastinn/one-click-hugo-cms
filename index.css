@@ -266,12 +266,14 @@ nav {
 .experience:nth-child(odd) .cv-line-brown {
   border-top: 10px solid #917C78;
   margin-right: -20px;
+  transform-origin: right;
   background-color: #F5F0F6;
+  transform: scaleX(0);
 }
 
 .experience:nth-child(odd) .cv-line-green {
   border-top: 10px solid #4A6C6F;
-  transform: scaleX(0.5);
+  transform: scaleX(0);
   transform-origin: right;
   margin-right: -20px;
   background-color: #F5F0F6;
@@ -279,7 +281,7 @@ nav {
 
 .experience:nth-child(odd) .cv-line-red {
   border-top: 10px solid #F03A47;
-  transform: scaleX(0.2);
+  transform: scaleX(0);
   transform-origin: right;
   margin-right: -20px;
 }
@@ -289,11 +291,13 @@ nav {
   margin-left: -20px;
   background-color: #F5F0F6;
   z-index: 2;
+  transform-origin: left;
+  transform: scaleX(0);
 }
 
 .experience:nth-child(even) .cv-line-green {
   border-top: 10px solid #4A6C6F;
-  transform: scaleX(0.5);
+  transform: scaleX(0);
   transform-origin: left;
   margin-left: -20px;
   background-color: #F5F0F6;
@@ -302,7 +306,7 @@ nav {
 
 .experience:nth-child(even) .cv-line-red {
   border-top: 10px solid #F03A47;
-  transform: scaleX(0.2);
+  transform: scaleX(0);
   transform-origin: left;
   margin-left: -20px;
   z-index: 2;
@@ -350,7 +354,7 @@ nav {
 
 .project-vertical-lines {
   margin-bottom: 10px;
-  height: 150px;
+  height: 170px;
   display: flex;
 }
 
@@ -378,6 +382,7 @@ nav {
 }
 
 .project-green-line {
+  display: none;
   border-top: 10px solid #4A6C6F;
   padding-bottom: 10px;
   transform: scaleX(0.5);
@@ -606,7 +611,7 @@ nav {
   display: flex;
   align-items: center;
   transform: scale(1) translateY(0px);
-  transition: transform .5s;
+  transition: transform .2s;
 }
 
 .contact-image-wrapper:hover {
@@ -637,6 +642,33 @@ nav {
   to {
     transform: scaleY(1);
     visibility: visible;
+  }
+}
+
+@keyframes brownline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes greenline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(0.5);
+  }
+}
+
+@keyframes redline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(0.2);
   }
 }
 
