@@ -132,9 +132,14 @@ nav {
   margin-left: 10px;
 }
 
+.links {
+  font-size: 1em;
+  transition: font-size .2s;
+}
+
 .links:hover,
 .links:active {
-  font-size: 30px;
+  font-size: 1.5em;
 }
 
 .links:hover > .green,
@@ -142,7 +147,7 @@ nav {
   animation-name: menu;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  animation-delay: .5s;
+  animation-delay: .6s;
 }
 
 .links:hover > .black,
@@ -150,7 +155,7 @@ nav {
   animation-name: menu;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  animation-delay: .3s;
+  animation-delay: .4s;
 }
 
 .links:hover > .red,
@@ -158,7 +163,7 @@ nav {
   animation-name: menu;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  animation-delay: .1s;
+  animation-delay: .2s;
 }
 
 .nav-lines {
@@ -184,6 +189,20 @@ nav {
   letter-spacing: -0.12em;
   margin-right: 0.35em;
   font-weight: 100;
+}
+
+.heading-letter {
+  transform: translateY(0px);
+  transition: transform 2s;
+  display: inline-block;
+}
+
+.heading-letter:hover:nth-child(odd) {
+  transform: translateY(-30px);
+}
+
+.heading-letter:hover:nth-child(even) {
+  transform: translateY(30px);
 }
 
 .cv {
@@ -457,6 +476,12 @@ nav {
   margin: 0 10px;
   display: flex;
   align-items: center;
+  transform: scale(1) translateY(0px);
+  transition: transform .5s;
+}
+
+.contact-image-wrapper:hover {
+  transform: scale(1.5) translateY(-10px);
 }
 
 .contact-image-wrapper img {
