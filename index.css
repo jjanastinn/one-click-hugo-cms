@@ -87,7 +87,7 @@ nav {
   border-left: 10px solid #F03A47;
   animation: loadline 1s forwards 1s;
   transform-origin: bottom;
-  visibility: hidden;
+  transform: scaleY(0);
 }
 
 .vertical-red-long {
@@ -96,6 +96,7 @@ nav {
   border-right: 10px solid #F03A47;
   animation: loadline 1s forwards;
   transform-origin: bottom;
+  transform: scaleY(0);
 }
 
 .horizontal-lines {
@@ -184,31 +185,18 @@ nav {
 }
 
 .heading {
+  display: block;
   text-align: right;
   font-size: 150px;
-  letter-spacing: -0.12em;
   margin-right: 0.35em;
   font-weight: 100;
-}
-
-.heading-letter {
-  transform: translateY(0px);
-  transition: transform 2s;
-  display: inline-block;
-}
-
-.heading-letter:hover:nth-child(odd) {
-  transform: translateY(-30px);
-}
-
-.heading-letter:hover:nth-child(even) {
-  transform: translateY(30px);
+  margin: 0 0.2em;
 }
 
 .cv {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0 3em 100px 3em;
+  margin: 0 3em 130px 3em;
 }
 
 .cvOne {
@@ -326,7 +314,7 @@ nav {
   display: grid;
   grid-template-columns: 25vw 1fr;
   grid-template-rows: 200px;
-  margin: 0 5vw 100px 5vw;
+  margin: 0 5vw 130px 5vw;
 }
 
 .project-name {
@@ -392,7 +380,7 @@ nav {
 .project-red-line {
   border-top: 10px solid #F03A47;
   padding-bottom: 10px;
-  transform: scaleX(0.7);
+  transform: scaleX(0);
   transform-origin: left;
 }
 
@@ -556,53 +544,113 @@ nav {
 }
 
 .contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
-.contact-red-line {
-  border-top: 10px solid #F03A47;
-  transform: scaleX(0.5);
-  transform-origin: right;
-  padding-bottom: 10px;
+.contact-lines {
+  display: flex;
+  align-items: flex-end;
 }
 
-.contact-green-line {
-  border-top: 10px solid #4A6C6F;
-  transform: scaleX(0.75);
-  transform-origin: right;
-  padding-bottom: 10px;
+.contactline {
+  padding-left: 10px;
+  transform-origin: bottom;
+  transform: scaleY(0);
 }
 
-.contact-black-line {
-  border-top: 10px solid black;
+.contact-line-one {
+  border-right: 10px solid black;
+  height: 280px;
 }
 
-.contact-red-line-right {
-  border-top: 10px solid #F03A47;
-  transform: scaleX(0.5);
-  transform-origin: left;
-  padding-bottom: 10px;
+.contact-line-two {
+  border-right: 10px solid #917C78;
+  height: 260px;
 }
 
-.contact-green-line-right {
-  border-top: 10px solid #4A6C6F;
-  transform: scaleX(0.75);
-  transform-origin: left;
-  padding-bottom: 10px;
+.contact-line-three {
+  border-right: 10px solid #4A6C6F;
+  height: 140px;
 }
 
-.contact-black-line-right {
-  border-top: 10px solid black;
+.contact-line-four {
+  border-right: 10px solid black;
+  height: 180px;
+}
+
+.contact-line-five {
+  border-right: 10px solid #F03A47;
+  height: 200px;
+}
+
+.contact-line-six {
+  border-right: 10px solid #4A6C6F;
+  height: 170px;
+}
+
+.contact-line-seven {
+  border-right: 10px solid #917C78;
+  height: 150px;
+}
+
+.contact-line-eight {
+  border-right: 10px solid black;
+  height: 130px;
+}
+
+.contact-line-nine {
+  border-right: 10px solid black;
+  height: 120px;
+}
+
+.contact-line-ten {
+  border-right: 10px solid #F03A47;
+  height: 80px;
+}
+
+.contact-line-eleven {
+  border-right: 10px solid #4A6C6F;
+  height: 50px;
+}
+
+.contact-line-twelve {
+  border-right: 10px solid #917C78;
+  height: 60px;
+}
+
+.contact-line-thirteen {
+  border-right: 10px solid black;
+  height: 100px;
+}
+
+.contact-line-fourteen {
+  border-right: 10px solid #4A6C6F;
+  height: 90px;
+}
+
+.contact-line-fifteen {
+  border-right: 10px solid black;
+  height: 70px;
+}
+
+.contact-line-sixteen {
+  border-right: 10px solid #917C78;
+  height: 40px;
+}
+
+.contact-line-seventeen {
+  border-right: 10px solid #F03A47;
+  height: 30px;
 }
 
 .contact-images {
   display: flex; 
   align-items: center;
   justify-content: space-around;
-  padding: 0 3em;
+  padding: 10px;
+  width: 30vw;
 }
 
 .contact-image-wrapper {
@@ -637,11 +685,9 @@ nav {
 @keyframes loadline {
   from {
     transform: scaleY(0);
-    visibility: hidden;
   }
   to {
     transform: scaleY(1);
-    visibility: visible;
   }
 }
 
@@ -669,6 +715,15 @@ nav {
   }
   to {
     transform: scaleX(0.2);
+  }
+}
+
+@keyframes projectline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(0.7);
   }
 }
 
