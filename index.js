@@ -1,9 +1,6 @@
 'use strict';
 
-const steps = document.querySelectorAll(".experience");
-const brownline = document.querySelectorAll(".cv-line-brown");
-const greenline = document.querySelectorAll(".cv-line-green");
-const redline = document.querySelectorAll(".cv-line-red");
+const steps = document.querySelectorAll(".cv__entry");
 
 const createObserver = () => {
   const options = {
@@ -43,28 +40,28 @@ const createAnotherObserver = () => {
 const handleAnotherIntersect = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0) {
-      entry.target.children[0].children[0].style.animation = "loadline 1s forwards .2s"
-      entry.target.children[0].children[1].style.animation = "loadline 1s forwards .3s"
-      entry.target.children[0].children[2].style.animation = "loadline 1s forwards .4s"
-      entry.target.children[0].children[3].style.animation = "loadline 1s forwards .5s"
-      entry.target.children[0].children[4].style.animation = "loadline 1s forwards .6s"
-      entry.target.children[0].children[5].style.animation = "loadline 1s forwards .7s"
-      entry.target.children[0].children[6].style.animation = "loadline 1s forwards .8s"
-      entry.target.children[0].children[7].style.animation = "loadline 1s forwards .9s"
-      entry.target.children[0].children[8].style.animation = "loadline 1s forwards 1.1s"
-      entry.target.children[0].children[9].style.animation = "loadline 1s forwards 1.1s"
-      entry.target.children[0].children[10].style.animation = "loadline 1s forwards 1.2s"
-      entry.target.children[0].children[11].style.animation = "loadline 1s forwards 1.3s"
-      entry.target.children[0].children[12].style.animation = "loadline 1s forwards 1.4s"
-      entry.target.children[0].children[13].style.animation = "loadline 1s forwards 1.5s"
-      entry.target.children[0].children[14].style.animation = "loadline 1s forwards 1.6s"
-      entry.target.children[0].children[15].style.animation = "loadline 1s forwards 1.7s"
-      entry.target.children[0].children[16].style.animation = "loadline 1s forwards 1.8s"
+      entry.target.children[0].children[0].style.animation = "loadline 1s forwards .1s"
+      entry.target.children[0].children[1].style.animation = "loadline 1s forwards .2s"
+      entry.target.children[0].children[2].style.animation = "loadline 1s forwards .3s"
+      entry.target.children[0].children[3].style.animation = "loadline 1s forwards .4s"
+      entry.target.children[0].children[4].style.animation = "loadline 1s forwards .5s"
+      entry.target.children[0].children[5].style.animation = "loadline 1s forwards .6s"
+      entry.target.children[0].children[6].style.animation = "loadline 1s forwards .7s"
+      entry.target.children[0].children[7].style.animation = "loadline 1s forwards .8s"
+      entry.target.children[0].children[8].style.animation = "loadline 1s forwards .9s"
+      entry.target.children[0].children[9].style.animation = "loadline 1s forwards 1s"
+      entry.target.children[0].children[10].style.animation = "loadline 1s forwards 1.1s"
+      entry.target.children[0].children[11].style.animation = "loadline 1s forwards 1.2s"
+      entry.target.children[0].children[12].style.animation = "loadline 1s forwards 1.3s"
+      entry.target.children[0].children[13].style.animation = "loadline 1s forwards 1.4s"
+      entry.target.children[0].children[14].style.animation = "loadline 1s forwards 1.5s"
+      entry.target.children[0].children[15].style.animation = "loadline 1s forwards 1.6s"
+      entry.target.children[0].children[16].style.animation = "loadline 1s forwards 1.7s"
     } 
   });
 }
 
-const projectline = document.querySelector("#project-lines");
+const projectline = document.querySelector("#project__lines");
 
 const createYetAnotherObserver = () => {
   const options = {
@@ -79,9 +76,8 @@ const createYetAnotherObserver = () => {
 
 const handleYetAnotherIntersect = (entries, observer) => {
   entries.forEach(entry => {
-    console.log(entry);
     if (entry.intersectionRatio > 0) {
-      entry.target.children[2].style.animation = "projectline 1s forwards .2s"
+      entry.target.children[1].style.animation = "projectline 1s forwards .2s"
     } 
   });
 }
