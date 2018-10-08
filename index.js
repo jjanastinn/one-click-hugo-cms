@@ -1,5 +1,7 @@
 'use strict';
 
+
+// CV INTERSECTION OBSERVER
 const steps = document.querySelectorAll(".cv__entry");
 
 const createObserver = () => {
@@ -24,6 +26,8 @@ const handleIntersect = (entries, observer) => {
   });
 }
 
+
+// CONTACT INTERSECTION OBSERVER
 const contact = document.querySelector("#contact");
 
 const createAnotherObserver = () => {
@@ -61,6 +65,8 @@ const handleAnotherIntersect = (entries, observer) => {
   });
 }
 
+
+// PROJECT INTERSECTION OBSERVER
 const projectline = document.querySelector("#project__lines");
 
 const createYetAnotherObserver = () => {
@@ -88,3 +94,23 @@ window.addEventListener("load", (event) => {
   createYetAnotherObserver();
 }, false);
 
+
+// BURGER MENU
+const open = document.getElementById("burger__open");
+const menu = document.getElementById("burger__content");
+const menuList = document.getElementById("burger__list");
+const close = document.getElementById("burger__close");
+
+open.addEventListener("click", addMenu);
+close.addEventListener("click", removeMenu);
+
+function addMenu() {
+  document.body.style.overflow = "hidden";
+  menu.style.display = "inherit";
+  menuList.style.animation = "menuIn .5s ease-in .3s forwards";
+}
+
+// function removeMenu() {
+//   document.body.style.overflow = "inherit";
+//   menu.style.animation = "menuOut .5s easi-in forwards";
+// }

@@ -114,6 +114,39 @@ a:hover .link__lines:nth-child(3) {
 
 #burger__content {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transform: scale(1);
+  transform-origin: top left;
+}
+
+#burger__backdrop {
+  opacity: 0.5;
+  background-color: black;
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+}
+
+#burger__list {
+  background-color: var(--main-color-red);
+  color: white;
+  border-radius: 0 0 100%;
+  padding: 1em 11em 4em 1em;
+  z-index: 54;
+  margin-top: 0;
+  font-size: 30px;
+  line-height: 60px;
+  transform: scale(0);
+  transform-origin: top left;
+}
+
+#burger__close {
+  width: 20vw;
 }
 
 nav {
@@ -747,6 +780,16 @@ nav {
     transform: scaleX(0.9);
   }
 }
+
+@keyframes menuIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 
 /* MEDIA QUERIES */
 
