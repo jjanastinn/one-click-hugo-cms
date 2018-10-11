@@ -96,21 +96,19 @@ window.addEventListener("load", (event) => {
 
 
 // BURGER MENU
-const open = document.getElementById("burger__open");
-const menu = document.getElementById("burger__content");
+const open = document.querySelector(".burger__open");
+const menu = document.querySelector(".burger__content");
 const menuList = document.getElementById("burger__list");
 const close = document.getElementById("burger__close");
 
-open.addEventListener("click", addMenu);
-close.addEventListener("click", removeMenu);
-
-function addMenu() {
-  document.body.style.overflow = "hidden";
-  menu.style.display = "inherit";
-  menuList.style.animation = "menuIn .5s ease-in .3s forwards";
+const addMenu = () => {
+  menu.classList.add('is-display');
 }
 
-// function removeMenu() {
-//   document.body.style.overflow = "inherit";
-//   menu.style.animation = "menuOut .5s easi-in forwards";
-// }
+const removeMenu = () => {
+  document.body.style.overflow = "inherit";
+  menu.classList.remove('is-display');
+}
+
+open.addEventListener("click", addMenu);
+close.addEventListener("click", removeMenu);

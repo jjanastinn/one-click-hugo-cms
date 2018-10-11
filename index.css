@@ -101,7 +101,7 @@ a:hover .link__lines:nth-child(3) {
 
 /* NAVIGATION */
 
-#burger__open {
+.burger__open {
   position: fixed;
   left: 1em;
   padding: 15px;
@@ -110,16 +110,18 @@ a:hover .link__lines:nth-child(3) {
   border-radius: 50%;
   background-color: var(--main-color-red);
   z-index: 3;
+  opacity: 1;
+  transition: 0.15s;
 }
 
-#burger__content {
-  display: none;
+.burger__content {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
-  transform: scale(1);
+  transform: scale(0);
   transform-origin: top left;
+  transition: transform 0.3s;
 }
 
 #burger__backdrop {
@@ -141,12 +143,14 @@ a:hover .link__lines:nth-child(3) {
   margin-top: 0;
   font-size: 30px;
   line-height: 60px;
-  transform: scale(0);
   transform-origin: top left;
 }
 
 #burger__close {
-  width: 20vw;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 40px;
+  transform: rotate(90deg);
 }
 
 nav {
@@ -155,6 +159,10 @@ nav {
   right: 30px;
   top: 30px;
   text-align: right;
+}
+
+.is-display {
+  transform: scale(1);
 }
 
 /* MAIN */
@@ -784,10 +792,13 @@ nav {
 @keyframes menuIn {
   from {
     transform: scale(0);
-  }
-  to {
+  } to {
     transform: scale(1);
   }
+}
+
+@keyframes menuOut {
+
 }
 
 
