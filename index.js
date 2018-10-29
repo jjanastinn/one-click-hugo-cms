@@ -88,10 +88,44 @@ const handleYetAnotherIntersect = (entries, observer) => {
   });
 }
 
+
 window.addEventListener("load", (event) => {
-  createObserver();
-  createAnotherObserver();
-  createYetAnotherObserver();
+
+  if ('IntersectionObserver' in window) {
+    createObserver();
+    createAnotherObserver();
+    createYetAnotherObserver();
+  } else {
+    // CV DEFAULT
+    steps.forEach(step => {
+      step.children[2].style.animation = "brownline 2s forwards";
+      step.children[3].style.animation = "greenline 2s forwards";
+      step.children[4].style.animation = "redline 2s forwards";
+    })
+
+    // CONTACT DEFAULT
+    contact.children[0].children[0].style.animation = "loadline 1s forwards .1s";
+    contact.children[0].children[1].style.animation = "loadline 1s forwards .2s";
+    contact.children[0].children[2].style.animation = "loadline 1s forwards .3s";
+    contact.children[0].children[3].style.animation = "loadline 1s forwards .4s";
+    contact.children[0].children[4].style.animation = "loadline 1s forwards .5s";
+    contact.children[0].children[5].style.animation = "loadline 1s forwards .6s";
+    contact.children[0].children[6].style.animation = "loadline 1s forwards .7s";
+    contact.children[0].children[7].style.animation = "loadline 1s forwards .8s";
+    contact.children[0].children[8].style.animation = "loadline 1s forwards .9s";
+    contact.children[0].children[9].style.animation = "loadline 1s forwards 1s";
+    contact.children[0].children[10].style.animation = "loadline 1s forwards 1.1s";
+    contact.children[0].children[11].style.animation = "loadline 1s forwards 1.2s";
+    contact.children[0].children[12].style.animation = "loadline 1s forwards 1.3s";
+    contact.children[0].children[13].style.animation = "loadline 1s forwards 1.4s";
+    contact.children[0].children[14].style.animation = "loadline 1s forwards 1.5s";
+    contact.children[0].children[15].style.animation = "loadline 1s forwards 1.6s";
+    contact.children[0].children[16].style.animation = "loadline 1s forwards 1.7s";
+  }
+
+  // PROJECT DEFAULT
+  projectline.children[1].style.animation = "projectline 1s forwards .2s";
+
 }, false);
 
 
@@ -100,8 +134,10 @@ const open = document.querySelector(".burger__open");
 const menu = document.querySelector(".burger__content");
 const menuList = document.getElementById("burger__list");
 const close = document.getElementById("burger__close");
+const burgerLinks = document.querySelectorAll(".burger__links");
 
 const addMenu = () => {
+  document.body.style.overflow = "hidden";
   menu.classList.add('is-display');
 }
 
@@ -112,3 +148,6 @@ const removeMenu = () => {
 
 open.addEventListener("click", addMenu);
 close.addEventListener("click", removeMenu);
+burgerLinks.forEach(link => {
+  link.addEventListener("click", removeMenu);
+})
